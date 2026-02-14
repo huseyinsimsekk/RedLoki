@@ -31,16 +31,6 @@ Register the filter in your DI container:
 - `TimeUnit.Hours`
 - `TimeUnit.Days`
 
-## Examples
-
-### Example 1: Lock by Route Parameter
-**Configuration:**
-### Example 2: Lock by Request Body Property
-**Configuration:**
-### Example 3: Lock by Query Parameter
-**Configuration:**
-### Example 4: Lock by Custom Header
-**Configuration:**
 ## How It Works
 
 1. **Key Resolution**: The filter searches for the lock key in this order:
