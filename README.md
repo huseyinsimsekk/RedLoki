@@ -10,18 +10,20 @@ A lightweight ASP.NET Core action filter that provides distributed locking using
 - ⏱️ **Configurable Expiration**: Set custom lock expiration times
 - 🚀 **Easy Integration**: Simple attribute-based usage
 
-## Installation
-Add Redis connection to your `Program.cs` or `Startup.cs`:
 ## Usage
 
 ### Basic Usage
 
 Apply the `RedisLockFilter` to your controller action:
-### Register the Filter
-
-Register the filter in your DI container:
-## Configuration
-
+```csharp
+[HttpPost]
+[TypeFilter(typeof(DistributedLockFilter), Arguments = new object[] { "ProductId" })]
+public bool AddProductByKeyValue(long productId, string productValue)
+{
+    // Example lock attribute
+    return true;
+}
+``` 
 ### Constructor Parameters
 ### Time Units
 
